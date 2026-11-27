@@ -1,0 +1,11 @@
+{
+  "name": "Voice Access",
+  "description": "An accessible, voice-first Indian language assistant for blind, visually impaired, and non-English-comfortable users.",
+  "requestFramePermissions": [
+    "microphone",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

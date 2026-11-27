@@ -1,0 +1,15 @@
+services:
+  voice-access:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: voice-access-app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - DEMO_SECURITY_PIN=${DEMO_SECURITY_PIN:-1234}
+      - APP_URL=${APP_URL:-http://localhost:3000}
+    restart: unless-stopped
